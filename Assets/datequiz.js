@@ -1,6 +1,10 @@
+let friskyChoice;
 let friskyResult;
+let adventerousChoice;
 let adventerousResult;
+let fancyChoice;
 let fancyResult;
+let chillChoice;
 let chillResult;
 let currentQuestionIndex = 0;
 
@@ -88,6 +92,43 @@ const questions = [
     }
 ];
 
-function displayQuestion(){
-    
+function updateQuestionDisplay(){
+    const currentQuestion = questions[currentQuestionIndex];
+    $('#question') = questions[currentQuestionIndex];
+    $('questionButton-1').text(currentQuestion.options[0])
+    $('questionButton-2').text(currentQuestion.options[1])
+    $('questionButton-3').text(currentQuestion.options[2])
+    $('questionButton-4').text(currentQuestion.options[3])
+};
+
+function nextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        updateQuestionDisplay()
+    } else {
+        //display results
+    }
+};
+
+function addPoints(choice) {
+    let currentQuestion = questions[currentQuestionIndex];
+
+    friskyChoice = choice == currentQuestion.options[0];
+    adventerousChoice = choice == currentQuestion.options[1];
+    fancyChoice = choice == currentQuestion.options[2];
+    chillChoice = choice == currentQuestion.options[3];
+
+    if(friskyChoice){
+        friskyResult++
+    } else if (adventerousChoice) {
+        adventerousResult++
+    } else if (fancyChoice) {
+        fancyResult ++ 
+    } else if (chillChoice) {
+        chillResult++
+    }
+
+
+
 }
+
