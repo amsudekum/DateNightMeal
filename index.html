@@ -2,79 +2,120 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Menu Planner</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Menu Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
 
-<script>
+  <script>
     tailwind.config = {
-    content: ["./**/*.{html,js}"],
-    theme: {
+      content: ["./**/*.{html,js}"],
+      theme: {
         spacing: {
-            '1': '8px',
-            '2': '12px',
-            '3': '16px',
-            '4': '24px',
-            '5': '32px',
-            '6': '48px',
-          },
-      screens: {
-        sm: '480px',
-        md: '768px',
-        lg: '976px',
-        xl: '1440px',
-      },
-      colors: {
-        'red': '#7f1d1d',
-        'white': '#e7e5e4',
-        'black': '#171717',
-        
-      },
-      fontFamily1: {
-        'sans': ['Poppins', 'sans-serif'],
-        //block text
-      },
-      fontFamily2:{
-        'sans2':['Explora', 'cursive'],
-        //cursive 
-      },
-      extend: {
-        spacing: {
-          '128': '32rem',
-          '144': '36rem',
+          '1': '8px',
+          '2': '12px',
+          '3': '16px',
+          '4': '24px',
+          '5': '32px',
+          '6': '48px',
         },
-        borderRadius: {
-          '4xl': '2rem',
+        screens: {
+          sm: '480px',
+          md: '768px',
+          lg: '976px',
+          xl: '1440px',
+        },
+        colors: {
+          'red': '#7f1d1d',
+          'white': '#e7e5e4',
+          'black': '#171717',
+
+        },
+        fontFamily1: {
+          'sans': ['Poppins', 'sans-serif'],
+          //block text
+        },
+        fontFamily2: {
+          'sans2': ['Explora', 'cursive'],
+          //cursive 
+        },
+        extend: {
+          spacing: {
+            '128': '32rem',
+            '144': '36rem',
+          },
+          borderRadius: {
+            '4xl': '2rem',
+          }
         }
       }
     }
-  }
 
-    
+
   </script>
 </head>
 
 <body>
+  <nav class="fixed flex md: bg-red items-center justify-between flex-wrap p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <span class="font-semibold text-xl tracking-tight">Date Night</span>
+    </div>
+    <div class="block lg:hidden">
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div class="text-sm lg:flex-grow">
+        <a href="#home"
+          class="inline-block text-sm px-4 py-2 leading-none text-white border-white hover:border-transparent hover:text-red hover:bg-white mt-4 lg:mt-0">
+          Home
+        </a>
+        <a href="#recipes"
+          class="inline-block text-sm px-4 py-2 leading-none text-white border-white hover:border-transparent hover:text-red hover:bg-white mt-4 lg:mt-0">
+          Recipes
+        </a>
+        <a href="#quiz"
+          class="inline-block text-sm px-4 py-2 leading-none text-white border-white hover:border-transparent hover:text-red hover:bg-white mt-4 lg:mt-0">
+          Quiz
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="">
+    <div class="row">
+      <div class="col-6">MENU PLANNER</div>
+      <div class="col-6"></div>
+    </div>
+  </section>
   <!-- header goes here with navbar -->
   <!-- navbar contents: home, quiz, recipies -->
   <h1 class="text-3xl font-bold underline">
     Hello world!
   </h1>
-  
+
   <!-- items needed
   stock images
   recipes
   link to quiz datequiz.html  -->
-  
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+  <!-- placeholder paragraph -->
+  <div class="bg-sky-400 aspect-square">
+    <p class="font-sans md:font-serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolores
+      eveniet nam
+      reiciendis, ducimus
+      nesciunt, dolorem rerum voluptas quasi sapiente exercitationem, porro reprehenderit magnam veniam quod!
+      Consequuntur dolor voluptate autem?</p>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="assets/script.js"></script>
 </body>
 
