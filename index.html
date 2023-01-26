@@ -13,9 +13,8 @@
     rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
-
-  <script>
+  <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
+<script>
     tailwind.config = {
       content: ["./**/*.{html,js}"],
       theme: {
@@ -34,18 +33,17 @@
           xl: '1440px',
         },
         colors: {
-          'red': '#7f1d1d',
-          'white': '#e7e5e4',
+          'red': '#e11d48',
+          'amber': '#fffbeb',
           'black': '#171717',
-
+          'white': '#fafafa',
         },
-        fontFamily1: {
-          'sans': ['Poppins', 'sans-serif'],
+        fontFamily: {
           //block text
-        },
-        fontFamily2: {
-          'sans2': ['Explora', 'cursive'],
-          //cursive 
+          'sans': 'Poppins, sans-serif',
+          //cursive text
+          'cursive': 'Charm, sans-serif',
+          // to use font-sans .or. font-cursive
         },
         extend: {
           spacing: {
@@ -58,7 +56,6 @@
         }
       }
     }
-
 
   </script>
 </head>
