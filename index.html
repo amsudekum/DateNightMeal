@@ -12,8 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
 <script>
     tailwind.config = {
     content: ["./**/*.{html,js}"],
@@ -33,19 +32,20 @@
         xl: '1440px',
       },
       colors: {
-        'red': '#7f1d1d',
-        'white': '#e7e5e4',
+        'red': '#e11d48',
+        'amber': '#fffbeb',
         'black': '#171717',
-        
+        'white': '#fafafa',
       },
-      fontFamily1: {
-        'sans': ['Poppins', 'sans-serif'],
-        //block text
+  
+      fontFamily: {
+         //block text
+        'sans': 'Poppins, sans-serif',
+        //cursive text
+        'cursive': 'Charm, sans-serif',
+      // to use font-sans .or. font-cursive
       },
-      fontFamily2:{
-        'sans2':['Explora', 'cursive'],
-        //cursive 
-      },
+
       extend: {
         spacing: {
           '128': '32rem',
@@ -58,7 +58,13 @@
     }
   }
 
-    
+// Tailwind’s flexbox and padding utilities (flex, shrink-0, and p-6) to control the overall card layout
+// The max-width and margin utilities (max-w-sm and mx-auto) to constrain the card width and center it horizontally
+// The background color, border radius, and box-shadow utilities (bg-white, rounded-xl, and shadow-lg) to style the card’s appearance
+// The width and height utilities (w-12 and h-12) to size the logo image
+// The space-between utilities (space-x-4) to handle the spacing between the logo and the text
+// The font size, text color, and font-weight utilities (text-xl, text-black, font-medium, etc.) to style the card text
+
   </script>
 </head>
 
