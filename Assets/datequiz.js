@@ -1,10 +1,7 @@
-let friskyChoice;
+
 let friskyResult;
-let adventerousChoice;
 let adventerousResult;
-let fancyChoice;
 let fancyResult;
-let chillChoice;
 let chillResult;
 let currentQuestionIndex = 0;
 
@@ -111,24 +108,15 @@ function nextQuestion() {
 };
 
 function addPoints(choice) {
-    let currentQuestion = questions[currentQuestionIndex];
-
-    friskyChoice = choice == currentQuestion.options[0];
-    adventerousChoice = choice == currentQuestion.options[1];
-    fancyChoice = choice == currentQuestion.options[2];
-    chillChoice = choice == currentQuestion.options[3];
-
-    if(friskyChoice){
+    
+    if(choice == 0){
         friskyResult++
-    } else if (adventerousChoice) {
+    } else if (choice == 1) {
         adventerousResult++
-    } else if (fancyChoice) {
+    } else if (choice == 2) {
         fancyResult ++ 
-    } else if (chillChoice) {
+    } else if (choice == 3) {
         chillResult++
     }
-
-
-
 }
 
