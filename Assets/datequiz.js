@@ -1,3 +1,4 @@
+
 let friskyResult;
 let adventerousResult;
 let fancyResult;
@@ -88,6 +89,34 @@ const questions = [
     }
 ];
 
-function displayQuestion(){
+function updateQuestionDisplay(){
+    const currentQuestion = questions[currentQuestionIndex];
+    $('#question') = questions[currentQuestionIndex];
+    $('questionButton-1').text(currentQuestion.options[0])
+    $('questionButton-2').text(currentQuestion.options[1])
+    $('questionButton-3').text(currentQuestion.options[2])
+    $('questionButton-4').text(currentQuestion.options[3])
+};
+
+function nextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        updateQuestionDisplay()
+    } else {
+        //display results
+    }
+};
+
+function addPoints(choice) {
     
+    if(choice == 0){
+        friskyResult++
+    } else if (choice == 1) {
+        adventerousResult++
+    } else if (choice == 2) {
+        fancyResult ++ 
+    } else if (choice == 3) {
+        chillResult++
+    }
 }
+
