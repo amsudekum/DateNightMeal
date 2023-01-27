@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap"
+    rel="stylesheet">
+    <!-- sacramento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
     <title>Menu Planner</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -44,9 +52,9 @@
                 },
                 fontFamily: {
                     //block text
-                    'sans': 'Poppins, sans-serif',
+                    sans: ['Poppins', 'sans-serif'],
                     //cursive text
-                    'cursive': 'Charm, sans-serif',
+                    display: ['Sacramento', 'sans-serif'],
                     // to use font-sans .or. font-cursive
                 },
                 extend: {
@@ -65,34 +73,30 @@
 
 </head>
 <body>
-    <nav class="fixed flex items-center justify-between flex-wrap p-6">
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <span class="font-semibold text-xl tracking-tight">Date Night</span>
-        </div>
-
+    <nav class="fixed flex row-span scrolled items-center justify-between p-2 bg-darkRed">
         <div class="block lg:hidden">
-        </div>
-
-        <div class="block lg:hidden"></div>
-
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-            <div class="text-sm lg:flex-grow">
-                <a href="#home"
-                    class="inline-block text-sm px-4 py-2 leading-none text-white border-white hover:border-transparent hover:text-red hover:bg-white mt-4 lg:mt-0">
-                    Home
-                </a>
-                <a href="#recipes"
-                    class="inline-block text-sm px-4 py-2 leading-none text-white border-white hover:border-transparent hover:text-red hover:bg-white mt-4 lg:mt-0">
-                    Recipes
-                </a>
-                <a href="#quiz"
-                    class="inline-block text-sm px-4 py-2 leading-none text-white border-white hover:border-transparent hover:text-red hover:bg-white mt-4 lg:mt-0">
-                    Quiz
-                </a>
-            </div>
-        </div>
-    </nav>
     
+        </div>
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <span class="text-3xl text-amber font-display tracking-tight">Date Night</span>
+        </div>
+    
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="">
+            <a href="index.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
+              Home
+            </a>
+            <a href="recipes.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
+              Recipes
+            </a>
+            <a href="datequiz.html" class="inline-block text-xl px-4 leading-none text-amber hover:text-white mt-4 font-sans lg:mt-0">
+              Quiz
+            </a>
+          </div>
+        </div>
+      </nav>
+
+        <br class="p-4">
     <div class="bg-amber text-center p-6">
         <div class="bg-amber items-center p-6">
             <p class="font-sans text-black text-bold md:font-sans"> You know what they say, the way to a person's heart is through their stomach. Take our quiz and we'll set the mood by taking the guess work out of dinner. <br> Take The Quiz Now!</p>

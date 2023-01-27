@@ -12,9 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap"
     rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       content: ["./**/*.{html,js}"],
@@ -41,9 +41,9 @@
         },
         fontFamily: {
           //block text
-          'sans': 'Poppins, sans-serif',
+          sans: ['Poppins', 'sans-serif'],
           //cursive text
-          'cursive': 'Charm, sans-serif',
+          cursive: ['Sacramento', 'sans-serif'],
           // to use font-sans .or. font-cursive
         },
         extend: {
@@ -131,6 +131,12 @@
       nesciunt, dolorem rerum voluptas quasi sapiente exercitationem, porro reprehenderit magnam veniam quod!
       Consequuntur dolor voluptate autem?</p>
   </div>
+
+  <div class="fixed flex items-center justify-between flex-wrap p-6">
+    <div class="font-cursive p-2 flex items-center flex-shrink-0 text-red "><h3 class="text-red font-cursive text-bold"> Made with Love </h3></div>
+    <div class="font-sans p-2 flex-inline items-center flex-shrink-0 text-red"> Ashley, Richard, Jacob, Aaron, and Cameron</div> 
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script src="assets/script.js"></script>
