@@ -1,6 +1,8 @@
 var apiKey = "9973533";
 https://www.themealdb.com/api/json/v2/9973533/latest.php
 
+www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=552
+
 let friskyResult;
 let adventerousResult;
 let fancyResult;
