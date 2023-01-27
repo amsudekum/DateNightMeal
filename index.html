@@ -26,6 +26,7 @@
           '4': '24px',
           '5': '32px',
           '6': '48px',
+          '7': '550px',
         },
         screens: {
           sm: '480px',
@@ -62,67 +63,86 @@
 </head>
 
 <body>
-  <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">&#9776;
-  </button>
-  <nav class="fixed flex scrolled items-center justify-between flex-wrap p-6">
-    <div class="block lg:hidden">
 
-    </div>
+  <nav class="fixed flex scrolled items-center justify-between flex-wrap p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
       <span class="font-semibold text-3xl text-red tracking-tight">Date Night</span>
+      <button id="mobile-open-button" class="text-3xl lg:hidden focus:outline-none">&#9776;
+      </button>
     </div>
 
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto sm:hidden">
       <div class="">
-        <a href="#home" class="inline-block text-xl px-4 text-red hover:text-white mt-4 lg:mt-0">
+        <a href="#home" class="text-xl px-4 text-red hover:text-white mt-4 lg:mt-0">
           Home
         </a>
-        <a href="#recipes" class="inline-block text-xl px-4 text-red hover:text-white mt-4 lg:mt-0">
+        <a href="#recipes" class="text-xl px-4 text-red hover:text-white mt-4 lg:mt-0">
           Recipes
         </a>
-        <a href="datequiz.html" class="inline-block text-xl px-4 leading-none text-red hover:text-white mt-4 lg:mt-0">
+        <a href="datequiz.html" class="text-xl px-4 leading-none text-red hover:text-white mt-4 lg:mt-0">
           Quiz
         </a>
       </div>
     </div>
   </nav>
 
-  <section class="home p-0">
+  <section id="home" class="">
     <div id="hero" class="">
       <div class="">
-        <img src="Assets\images\pexels-andres-ayrton-6578917.jpg" alt="">
+        <img class="h-7 w-full object-cover object-bottom" src="Assets\images\pexels-andres-ayrton-6578917.jpg" alt="">
       </div>
     </div>
   </section>
   <!-- header goes here with navbar -->
   <!-- navbar contents: home, quiz, recipies -->
-  <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+  <section class="max-w-4xl mx-auto p-4 flex justify-between items-center text-center">
     <h2 class="text-3xl font-bold underline ">
       Hello world!
     </h2>
-    <p>This is our website.... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias dolores eaque vitae
-      nulla voluptas incidunt. Porro autem molestias tempora deserunt esse vero doloremque vitae impedit earum, itaque
-      obcaecati numquam nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aliquid ad illo
-      dolorem officia, ut ea officiis cum velit consectetur quo quibusdam voluptate atque hic odio suscipit nulla
-      corrupti consequuntur?</p>
+    <p>Dinner's better when we eat together</p>
   </section>
-  <section class="home p-0">
-    <div class="grid grid-flow-col">
-      <div class="col-span-6">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate saepe, odio debitis cupiditate, autem
-        explicabo distinctio, tempore placeat ratione quis officiis harum. Quo facilis animi repellat hic. Quidem,
-        necessitatibus beatae?
+  <section id="">
+    <div class="sm:inline-block grid grid-flow-col items-center">
+      <div class="py-6 px-4 flex-1 col-span-5 text-center">
+        Let us help you with date night
       </div>
-      <div class="col-span-6">
-        <img src="Assets\images\pexels-cottonbro-studio-4057752.jpg" alt="">
+      <div class="display:inline flex col-span-6">
+        <img class="h-7 w-7 object-cover object-center" src="Assets\images\pexels-andres-ayrton-6578844.jpg" alt="">
       </div>
     </div>
   </section>
+  <section class="drinks">
+    <div class="grid grid-flow-col items-center">
+      <div class="flex col-span-6 m-0">
+        <img class="h-7 w-7 object-cover object-center rounded-r-lg" src="Assets\images\shutterstock_603385892.jpg"
+          alt="">
+      </div>
+      <div class="flex col-span-5 text-center">
+        Quote: "Dinner is better when we eat together"
+        Paragraph 1: Date night can be tough. Let us help you
+      </div>
+      <button href="datequiz.html">Quiz</button>
+    </div>
+  </section>
+
+  <section id="recipes">
+    <div class="grid grid-flow-col items-center">
+      <div class="lg: col-span-6 text-center">
+        Know what you're looking for? Check out our recipes here!
+      </div>
+      <button href="recipes.html">Recipes</button>
+      <div class="flex-initial flex-1 w-full h-7 col-span-6">
+        <img class="h-7 w-7 object-cover object-center rounded-lg" src="Assets\images\pexels-thirdman-7236725.jpg"
+          alt="">
+      </div>
+
+    </div>
+  </section>
+
   <!-- items needed
   stock images
   recipes
   link to quiz datequiz.html  -->
-
   <!-- placeholder paragraph -->
   <div class="bg-sky-400 aspect-square">
     <p class="font-sans md:font-serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolores
@@ -136,6 +156,7 @@
     <div class="font-cursive p-2 flex items-center flex-shrink-0 text-red "><h3 class="text-red font-cursive text-bold"> Made with Love </h3></div>
     <div class="font-sans p-2 flex-inline items-center flex-shrink-0 text-red"> Ashley, Richard, Jacob, Aaron, and Cameron</div> 
   </div>
+
 
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
