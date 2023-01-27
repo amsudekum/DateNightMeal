@@ -118,5 +118,5 @@ function addPoints(choice) {
     } else if (choice == 3) {
         chillResult++
     }
-}
+};
 
