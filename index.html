@@ -27,6 +27,7 @@
           '5': '32px',
           '6': '48px',
           '7': '550px',
+          '8': '170px',
         },
         screens: {
           sm: '480px',
@@ -66,20 +67,20 @@
 
   <nav class="fixed flex scrolled items-center justify-between flex-wrap p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <span class="font-semibold text-3xl text-red tracking-tight">Date Night</span>
+      <span class="font-cursive text-4xl text-red tracking-tight">Date Night</span>
       <button id="mobile-open-button" class="text-3xl lg:hidden focus:outline-none">&#9776;
       </button>
     </div>
 
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto sm:hidden">
       <div class="">
-        <a href="#home" class="text-xl px-4 text-red hover:text-white mt-4 lg:mt-0">
+        <a href="index.html" class="text-xl px-4 font-sans text-red hover:text-white mt-4 lg:mt-0">
           Home
         </a>
-        <a href="#recipes" class="text-xl px-4 text-red hover:text-white mt-4 lg:mt-0">
+        <a href="datequiz.html" class="text-xl px-4 font-sans text-red hover:text-white mt-4 lg:mt-0">
           Recipes
         </a>
-        <a href="datequiz.html" class="text-xl px-4 leading-none text-red hover:text-white mt-4 lg:mt-0">
+        <a href="recipes.html" class="text-xl px-4 leading-none font-sans text-red hover:text-white mt-4 lg:mt-0">
           Quiz
         </a>
       </div>
@@ -117,20 +118,20 @@
         <img class="h-7 w-7 object-cover object-center rounded-r-lg" src="Assets\images\shutterstock_603385892.jpg"
           alt="">
       </div>
-      <div class="flex col-span-5 text-center">
-        Quote: "Dinner is better when we eat together"
-        Paragraph 1: Date night can be tough. Let us help you
+      <div class="flex col-span-5 text-center font-sans text-bold text-black">
+        "Dinner is better when we eat together"
+        Date night can be tough. Let us help you
       </div>
-      <button href="datequiz.html">Quiz</button>
+      <a class="flex flex-col items-center bg-red  h hover:bg-darkRed text-3xl text-white py-4 px-8 border-black md:font-cursive rounded" id="quizLink-btn" href="datequiz.html">Quiz</a>
     </div>
   </section>
 
   <section id="recipes">
     <div class="grid grid-flow-col items-center">
-      <div class="lg: col-span-6 text-center">
-        Know what you're looking for? Check out our recipes here!
+      <div class="lg: col-span-6 text-center font-sans text-bold text-black">
+        Know what you're looking for? Find our favorite recipes here!
       </div>
-      <button href="recipes.html">Recipes</button>
+      <a class="flex flex-col items-center flex-wrap bg-red hover:bg-darkRed text-3xl h text-white py-4 px-8 w-8 border-black md:font-cursive rounded" id="recipes-btn" href="recipes.html">Recipes</a>
       <div class="flex-initial flex-1 w-full h-7 col-span-6">
         <img class="h-7 w-7 object-cover object-center rounded-lg" src="Assets\images\pexels-thirdman-7236725.jpg"
           alt="">
@@ -139,10 +140,9 @@
     </div>
   </section>
 
-  <!-- items needed
-  stock images
-  recipes
-  link to quiz datequiz.html  -->
+  <!--
+  recipes  -->
+
   <!-- placeholder paragraph -->
   <div class="bg-sky-400 aspect-square">
     <p class="font-sans md:font-serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolores
