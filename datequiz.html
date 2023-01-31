@@ -5,17 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Date Night Quiz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap"
     rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
-  
-
+    <!-- sacramento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <title>Menu Planner</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Date Night Quiz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       content: ["./**/*.{html,js}"],
@@ -35,20 +38,21 @@
           xl: '1440px',
         },
         colors: {
-          'red': '#7f1d1d',
+            'red': '#e11d48',
+          'darkRed': '#9f1239',
+          'amber': '#fffbeb',
           'white': '#e7e5e4',
           'black': '#171717',
           'stone': '#78716c',
           'zinc' : '#a1a1aa',
 
         },
-        fontFamily1: {
-          'sans': ['Poppins', 'sans-serif'],
-          //block text
-        },
-        fontFamily2: {
-          'sans2': ['Explora', 'cursive'],
-          //cursive 
+        fontFamily: {
+        //block text
+            sans: ['Poppins', 'sans-serif'],
+        //cursive text
+            display: ['Sacramento', 'sans-serif'],
+        // to use font-sans /or/ font-cursive
         },
         extend: {
           spacing: {
@@ -61,92 +65,85 @@
         }
       }
     }
-
-
   </script>
 </head>
 
 
-<body class="bg-stone w-full h-full">
+<body class="bg-amber w-full h-full">
   
   <header>
   
-    <div class="relative overflow-hidden bg-no-repeat bg-cover" style="
-      background-position: top;
-      background-image: url('./assets/images/shutterstock_603385892.jpg');
-      height: 450px;
-    ">
-      <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
-        style="background-color: rgba(71, 66, 66, 0.75)">
+    <div class="relative overflow-hidden bg-no-repeat bg-cover background-position: topheight: 450px;">
+        <img class="top fill w-full contrast-75 background" src='./assets/images/shutterstock_603385892.jpg'>ß
+      <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
 
   <nav class="fixed flex scrolled items-center justify-between flex-wrap p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <span class="font-cursive text-4xl text-amber tracking-tight">Date Night</span>
+      <span class="font-display text-4xl text-amber tracking-tight">Date Night</span>
       <button id="mobile-open-button" class="text-3xl lg:hidden focus:outline-none">&#9776;
       </button>
     </div>
 
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto sm:hidden">
       <div class="">
-        <a href="index.html" class="text-xl px-4 font-sans text-amber hover:text-white mt-4 lg:mt-0">
+        <a href="index.html" class="text-xl px-4 font-sans text-amber hover:text-red mt-4 lg:mt-0">
           Home
         </a>
-        <a href="recipes.html" class="text-xl px-4 font-sans text-amber hover:text-white mt-4 lg:mt-0">
+        <a href="recipes.html" class="text-xl px-4 font-sans text-amber hover:text-red mt-4 lg:mt-0">
           Recipes
         </a>
-        <a href="datequiz.html" class="text-xl px-4 leading-none font-sans text-amber hover:text-white mt-4 lg:mt-0">
+        <a href="datequiz.html" class="text-xl px-4 leading-none font-sans text-amber hover:text-red mt-4 lg:mt-0">
           Quiz
         </a>
       </div>
     </div>
   </nav>
         <div class="flex justify-center items-center h-full">
-          <div class="text-center text-white px-6 md:px-12">
-            <h1 class="text-5xl font-bold mt-0 mb-6">Quiz Time!</h1>
-            
+          <div class="text-center  text-white px-6 md:px-12">
+            <h1 class="text-6xl font-bold font-sans mt-0 mb-6">Date Quiz</h1>
           </div>
         </div>
       </div>
     </div>
     
-  </header>
+  </header class="bg-amber ">
 
 
-    <div class="aspect-auto p-4 text-left">
+    <div class="aspect-auto bg-amber p-4 text-center">
         <div class="aspect-auto p-4">
-            <h1>Question 1</h1>
-            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q1-b1"> answer 1</button>
-            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q1-b2"> answer 2</button>
-            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q1-b3"> answer 3</button>
-            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q1-b4"> answer 4</button>
+            <h1 class="font-sans p-2 text-4xl"></h1>
+            <button class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q1-b1"></button>
+            <button class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q1-b2"></button>
+            <button class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q1-b3"></button>
+            <button class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q1-b4"></button>
         </div>
     </div>
     
-    <div class="aspect-auto p-4 text-left">
+    <div class="aspect-auto bg-amber p-4 text-center">
         <div class="aspect-auto p-4">
-            <h1>Question 2</h1>
-            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q2-b1"> answer 1</button>
-            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q2-b2"> answer 2</button>
-            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q2-b3"> answer 3</button>
-            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q2-b4"> answer 4</button>
+            <h1 class="font-sans p-2 text-4xl"></h1>
+            <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q2-b1"></a>
+            <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q2-b2"></a>
+            <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q2-b3"></a>
+            <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q2-b4"></a>
         </div>
     </div>
-    <div class="aspect-auto p-4 text-left">
+    <div class="aspect-auto bg-amber p-4 text-center">
       <div class="aspect-auto p-4">
-          <h1>Question 3</h1>
-          <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q3-b1"> answer 1</button>
-          <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q3-b2"> answer 2</button>
-          <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q3-b3"> answer 3</button>
-          <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q3-b4"> answer 4</button>
+          <h1 class="font-sans p-2 text-4xl"></h1>
+          <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q3-b1"></a>
+          <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q3-b2"></a>
+          <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q3-b3"></a>
+          <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q3-b4"></a>
       </div>
   </div>
-  <div class="aspect-auto p-4 text-left">
+  <div class="aspect-auto bg-amber p-4 text-center">
     <div class="aspect-auto p-4">
-        <h1>Question 4</h1>
-        <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q4-b1"> answer 1</button>
-        <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q4-b2"> answer 2</button>
-        <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q4-b3"> answer 3</button>
-        <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q4-b4"> answer 4</button>
+        <h1 class="font-sans p-2 text-4xl"></h1>
+        <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q4-b1"></a>
+        <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q4-b2"></a>
+        <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q4-b3"></a>
+        <a class="bg-red hover:bg-darkRed drop-shadow-lg text-black py-1 px-1 sm:font-sans rounded" id="q4-b4"></a>
     </div>
 </div>
 <script src="assets/datequiz.js"></script>
