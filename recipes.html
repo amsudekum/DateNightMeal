@@ -1,74 +1,100 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Date Night Quiz</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap"rel="stylesheet">
-  <!-- sacramento -->
+  <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap"
+    rel="stylesheet">
+    <!-- sacramento -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      content: ["./**/*.{html,js}"],
-      theme: {
-        spacing: {
-          '1': '8px',
-          '2': '12px',
-          '3': '16px',
-          '4': '24px',
-          '5': '32px',
-          '6': '48px',
-        },
-        screens: {
-          sm: '480px',
-          md: '768px',
-          lg: '976px',
-          xl: '1440px',
-        },
-        colors: {
-          'red': '#e11d48',
-          'amber': '#fffbeb',
-          'black': '#171717',
-          'white': '#fafafa',
-          'darkRed': '#9f1239',
-          'stone': '#78716c',
-          'zinc' : '#a1a1aa',
+    <title>Menu Planner</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Date Night Quiz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            content: ["./**/*.{html,js}"],
+            theme: {
+                spacing: {
+                    '1': '8px',
+                    '2': '12px',
+                    '3': '16px',
+                    '4': '24px',
+                    '5': '32px',
+                    '6': '48px',
+                    '7': '120px',
+                    '8': '550px',
+                },
+                screens: {
+                    sm: '480px',
+                    md: '768px',
+                    lg: '976px',
+                    xl: '1440px',
+                },
+                backgroundImage: {
+                    'NAMEME': "url('INSERT.IMAGE')",
+                    'NAMEME2': "url('INSERT.IMAGE')",
+                },
 
-        },
-        fontFamily: {
-        //block text
-        sans: ['Poppins', 'sans-serif'],
-        //cursive text
-        display: ['Sacramento', 'sans-serif'],
-      // to use font-sans .or. font-cursive
-        },
-     },
-        extend: {
-          spacing: {
-            '128': '32rem',
-            '144': '36rem',
-          },
-          borderRadius: {
-            '4xl': '2rem',
-          }
+                colors: {
+                    'red': '#e11d48',
+                    'amber': '#fffbeb',
+                    'black': '#171717',
+                    'white': '#fafafa',
+                    'darkRed': '#9f1239',
+                },
+                fontFamily: {
+                    //block text
+                    sans: ['Poppins', 'sans-serif'],
+                    //cursive text
+                    display: ['Sacramento', 'sans-serif'],
+                    // to use font-sans .or. font-cursive
+                },
+                extend: {
+                    spacing: {
+                        '128': '32rem',
+                        '144': '36rem',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                    }
+                }
+            }
         }
-      }
-  </script>
+
+    </script>
+    <title>Date Night Quiz</title>
 </head>
+
 <body>
-  <div>
-    <div class="bg-cover bg-center" style="background-image: url('./assets/images/pexels-vlada-karpovich-6944024.jpg');height: 1300px;">
-      <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
-        <div class="flex justify-center items-center h-full">
-          <div class="text-center text-white px-6 md:px-12">
+
+    <nav class="fixed flex row-span scrolled items-center justify-between p-2 bg-darkRed">
+        <div class="block lg:hidden">
+    
+        </div>
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <span class="text-3xl text-amber font-display tracking-tight">Date Night</span>
+        </div>
+    
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="">
+            <a href="index.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
+              Home
+            </a>
+            <a href="datequiz.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
+              Recipes
+            </a>
+            <a href="recipes.html" class="inline-block text-xl px-4 leading-none text-amber hover:text-white mt-4 font-sans lg:mt-0">
+              Quiz
+            </a>
           </div>
         </div>
       </div>
@@ -161,6 +187,6 @@
 <script src="recipes.js"></script>
 </div>
 </body>
-</html>
 
+</html>
 
