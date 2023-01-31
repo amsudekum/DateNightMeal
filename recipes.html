@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap"
+    rel="stylesheet">
+    <!-- sacramento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <title>Menu Planner</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Date Night Quiz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            content: ["./**/*.{html,js}"],
+            theme: {
+                spacing: {
+                    '1': '8px',
+                    '2': '12px',
+                    '3': '16px',
+                    '4': '24px',
+                    '5': '32px',
+                    '6': '48px',
+                    '7': '120px',
+                    '8': '550px',
+                },
+                screens: {
+                    sm: '480px',
+                    md: '768px',
+                    lg: '976px',
+                    xl: '1440px',
+                },
+                backgroundImage: {
+                    'NAMEME': "url('INSERT.IMAGE')",
+                    'NAMEME2': "url('INSERT.IMAGE')",
+                },
+
+                colors: {
+                    'red': '#e11d48',
+                    'amber': '#fffbeb',
+                    'black': '#171717',
+                    'white': '#fafafa',
+                    'darkRed': '#9f1239',
+                },
+                fontFamily: {
+                    //block text
+                    sans: ['Poppins', 'sans-serif'],
+                    //cursive text
+                    display: ['Sacramento', 'sans-serif'],
+                    // to use font-sans .or. font-cursive
+                },
+                extend: {
+                    spacing: {
+                        '128': '32rem',
+                        '144': '36rem',
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+
+    </script>
+    <title>Date Night Quiz</title>
+</head>
+
+<body>
+
+    <nav class="fixed flex row-span scrolled items-center justify-between p-2 bg-darkRed">
+        <div class="block lg:hidden">
+    
+        </div>
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <span class="text-3xl text-amber font-display tracking-tight">Date Night</span>
+        </div>
+    
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="">
+            <a href="index.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
+              Home
+            </a>
+            <a href="datequiz.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
+              Recipes
+            </a>
+            <a href="recipes.html" class="inline-block text-xl px-4 leading-none text-amber hover:text-white mt-4 font-sans lg:mt-0">
+              Quiz
+            </a>
+          </div>
+        </div>
+      </nav>
+
+        <br class="p-4">
+    <div class="bg-amber text-center p-6">
+        <div class="bg-amber items-center p-6">
+            <p class="font-sans text-black text-bold md:font-sans"> You know what they say, the way to a person's heart is through their stomach. Take our quiz and we'll set the mood by taking the guess work out of dinner. <br> Take The Quiz Now!</p>
+            <button class="bg-red hover:bg-darkRed text-white py-4 px-8 border-black md:font-cursive rounded" id="quizLink-btn"> Take Quiz!</button>
+        </div>
+
+        <div class ="bg-red items-center text-center text-amber font-sans p-6 box-content h-80 w-120">
+            <div id="question"></div>
+        </div>
+    </div>
+
+    <!-- results -->
+    <div class="flex flex-row items-center justify-center bg-amber">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg block px-4 justify-self-auto bg-white">
+            <img class="w-full" src="Assets/images/selina-thomas-M4AV9h4ztQg-unsplash.jpg" alt="beef curry in a bowl">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Massaman Beef Curry</h2>
+                <p class="text-gray-700 text-base">No vanilla date night for you two. This Massaman Beef Curry is a match made in heaven for you thrill seakers! Cut down on the spice with a delicous Mango Lassi.</p>
+            </div>
+        </div>
+
+        <div class="max-w-sm rounded overflow-hidden shadow-lg block px-4 justify-self-auto bg-white">
+            <img class="w-full" src="Assets/images/hamide-jafari-84qvBiHrWgg-unsplash.jpg" alt="pasta in a bowl">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Venetian Duck Ragu</div>
+                    <p class ='text-gray-700 text-base'>There's no shortage of luxury here with this Venetian Duck Ragu. Slap on your flashiest digs, dim the lights <em>real</em> low and enjoy this gorgeous pasta with your favorite glass of Chianti.</p>
+                </div>
+        </div>
+
+        <div class="max-w-sm rounded overflow-hidden shadow-lg block px-4 justify-self-auto bg-white">
+            <img class="w-full" src="Assets/images/micheile-dot-com-aPAY3jXyuXI-unsplash.jpg" alt="stack of pancakes">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Banana Pancakes</h2>
+                <p class ='text-gray-700 text-base'>Who doesn't love a little breakfast for dinner? Keep your date night nice and cozy with this easy peasy Banana Pancakes recipe. Sip on an espresso martini while you're eating to keep the romance going all night long. </p>
+            </div>
+        </div>
+
+        <div class='max-w-sm rounded overflow-hidden shadow-lg block px-4 justify-self-auto bg-white'>
+            <img class='w-full' src="Assets/images/535945708-huge.jpg" alt="teriyaki salmon">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Honey Teriyaki Salmon</div>
+                <p class="text-gray-700 text-base">You're feeling frisky, huh? With aphrodisiacs such as salmon and honey, this dish is packed with all the good stuff to <em>really</em> set the mood. Pair this with a Honey Bee and you two will be having dinner in bed.</p>
+            </div>
+        </div>
+    </div>     
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="tailwind.config.js"></script>
+    <script href="assets/datequiz.js"></script>
+</body>
+
+</html>
+

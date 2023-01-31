@@ -2,25 +2,177 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Menu Planner</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Menu Planner</title>
+  <link rel="stylesheet" href="./Assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      content: ["./**/*.{html,js}"],
+      theme: {
+        spacing: {
+          '1': '8px',
+          '2': '12px',
+          '3': '16px',
+          '4': '24px',
+          '5': '32px',
+          '6': '48px',
+          '7': '550px',
+          '8': '170px',
+          '10': '200px',
+        },
+        screens: {
+          sm: '480px',
+          md: '768px',
+          lg: '976px',
+          xl: '1440px',
+        },
+        colors: {
+          'red': '#e11d48',
+          'amber': '#fffbeb',
+          'black': '#171717',
+          'white': '#fafafa',
+          'darkRed': '#991b1b',
+          'light': '#fecaca',
+        },
+        fontFamily: {
+          //block text
+          sans: ['Poppins', 'sans-serif'],
+          //cursive text
+          cursive: ['Sacramento', 'sans-serif'],
+          // to use font-sans .or. font-cursive
+        },
+        extend: {
+          spacing: {
+            '128': '32rem',
+            '144': '36rem',
+          },
+          borderRadius: {
+            '4xl': '2rem',
+          }
+        }
+      }
+    }
+
+  </script>
 </head>
 
-<body>
-<!-- header -->
-<!-- In header add a nav bar. Includes Home, Quiz, and recipes  -->
-<!-- Nav bar also always stays ontop of the screen -->
+<body class="bg-darkRed">
 
-<!-- recipes erea -->
+  <nav class="fixed flex scrolled items-center justify-between flex-wrap p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <span class="font-cursive text-4xl text-red tracking-tight">Date Night</span>
+      <button id="mobile-open-button" class="text-3xl lg:hidden focus:outline-none">&#9776;
+      </button>
+    </div>
 
-<!--add an image for each section  -->
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto sm:hidden">
+      <div class="">
+        <a href="index.html" class="text-xl px-4 font-sans text-red hover:text-white mt-4 lg:mt-0">
+          Home
+        </a>
+        <a href="datequiz.html" class="text-xl px-4 font-sans text-red hover:text-white mt-4 lg:mt-0">
+          Recipes
+        </a>
+        <a href="recipes.html" class="text-xl px-4 leading-none font-sans text-red hover:text-white mt-4 lg:mt-0">
+          Quiz
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="">
+    <div id="hero" class="">
+      <div class="">
+        <img class="h-7 w-full object-cover object-bottom" src="Assets\images\pexels-andres-ayrton-6578917.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  <!-- header goes here with navbar -->
+  <!-- navbar contents: home, quiz, recipies -->
+  <div class="border border-amber m-2">
+    <div class="grid grid-col-2 gap-2 grid-flow-col"> 
+
+      <div class="flex items-center justify-center">
+        <p class="text-3xl text-light text-center font-Poppins align-middle ml-2 pr-3">DINNER IS BETTER WHEN WE EAT IT </p>
+        <span class='text-4xl text-light text-center font-Poppins font-bold font-italic'>TOGETHER</span>
+      </div>
+  
+      <div class="flex items-center justify-center">
+        <img class="jusify-content h-auto max-w-4xl ml-auto pr-6 pt-8" src="Assets\images\pexels-andres-ayrton-6578844.jpg" alt="">
+      </div>
+       
+    </div>
+  
+    <div class="grid grid-col-2 gap-2 grid-flow-col">
+  
+        <div class="flex items-center justify-center">
+          <img class="jusify-content max-h max-w-4xl ml-auto ml-6 pr-6 pt-8" src="Assets\images\shutterstock_603385892.jpg"
+            alt="">
+        </div>
+  
+        <div class="flex flex-col items-center justify-center">
+          <p class="text-3xl text-light text-center font-Poppins align-middle mr-3">WHO HAS TIME TO FIGURE OUT DINNER?</p>
+          <p class="text-xl text-light text-center font-Poppins align-middle mr-3 mb-4">Let us take the mystery out of date night by taking a quick quiz.</p>
+          <a class="items-center bg-amber  h hover:bg-darkRed text-3xl text-red py-4 px-8 border-black md:font-cursive rounded" id="quizLink-btn" href="datequiz.html">Quiz</a>
+        </div>
+
+    </div>
+   
+  
+ 
+    <div class="grid grid-col-2 gap-2 grid-flow-col">
+
+      <div class="flex flex-col items-center justify-center">
+
+        <div class="text-3xl text-light text-center font-Poppins align-middle mr-3">
+          You bring the booze and we'll set the mood
+        </div>
+        <div class="text-xl text-light text-center font-Poppins align-middle mr-3 mb-4">Want to go rogue? Head here to check out some more recipes</div>
+        <a class="items-center bg-amber  h hover:bg-darkRed text-3xl text-red py-4 px-8 border-black md:font-cursive rounded" id="recipes-btn" href="recipes.html">Recipes</a>
+      </div>
+      
+     
+      <div class="flex items-center justify-center">
+        <img class="jusify-content h-auto max-w-3xl ml-auto pr-6 pt-8" src="Assets\images\pexels-thirdman-7236725.jpg"
+          alt="">
+      </div>
+
+        
+    </div>
+  
+  
+    <!--
+    recipes  -->
+  
+    <!-- placeholder paragraph -->
+    <div class="bg-sky-400 aspect-square">
+      <p class="font-sans md:font-serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolores
+        eveniet nam
+        reiciendis, ducimus
+        nesciunt, dolorem rerum voluptas quasi sapiente exercitationem, porro reprehenderit magnam veniam quod!
+        Consequuntur dolor voluptate autem?</p>
+    </div>
+  
+    <div class="fixed flex items-center justify-between flex-wrap p-6">
+      <div class="font-cursive p-2 flex items-center flex-shrink-0 text-amber "><h3 class="text-red font-cursive text-bold"> Made with Love </h3></div>
+      <div class="font-sans p-2 flex-inline items-center flex-shrink-0 text-amber"> Ashley, Richard, Jacob, Aaron, and Cameron</div> 
+    </div>
+  </div>
 
 
-<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-<script src="assets/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="assets/script.js"></script>
 </body>
 
 </html>
