@@ -2,105 +2,130 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Date Night Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap"
     rel="stylesheet">
-    <!-- sacramento -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-    <title>Menu Planner</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-   <!-- title -->
-    <title>Date Night Quiz</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link ref="stylesheet" href="assets/style.css">
-    <script>
-        tailwind.config = {
-            content: ["./**/*.{html,js}"],
-            theme: {
-                spacing: {
-                    '1': '8px',
-                    '2': '12px',
-                    '3': '16px',
-                    '4': '24px',
-                    '5': '32px',
-                    '6': '48px',
-                    '7': '120px',
-                    '8': '550px',
-                },
-                screens: {
-                    sm: '480px',
-                    md: '768px',
-                    lg: '976px',
-                    xl: '1440px',
-                },
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
+  
 
-                colors: {
-                    'red': '#e11d48',
-                    'amber': '#fffbeb',
-                    'black': '#171717',
-                    'white': '#fafafa',
-                    'darkRed': '#9f1239',
-                },
-                fontFamily: {
-                    //block text
-                    sans: ['Poppins', 'sans-serif'],
-                    //cursive text
-                    display: ['Sacramento', 'sans-serif'],
-                    // to use font-sans .or. font-cursive
-                },
-                extend: {
-                    spacing: {
-                        '128': '32rem',
-                        '144': '36rem',
-                    },
-                    borderRadius: {
-                        '4xl': '2rem',
-                    }
-                }
-            }
+  <script>
+    tailwind.config = {
+      content: ["./**/*.{html,js}"],
+      theme: {
+        spacing: {
+          '1': '8px',
+          '2': '12px',
+          '3': '16px',
+          '4': '24px',
+          '5': '32px',
+          '6': '48px',
+        },
+        screens: {
+          sm: '480px',
+          md: '768px',
+          lg: '976px',
+          xl: '1440px',
+        },
+        colors: {
+          'red': '#7f1d1d',
+          'white': '#e7e5e4',
+          'black': '#171717',
+          'stone': '#78716c',
+          'zinc' : '#a1a1aa',
+
+        },
+        fontFamily1: {
+          'sans': ['Poppins', 'sans-serif'],
+          //block text
+        },
+        fontFamily2: {
+          'sans2': ['Explora', 'cursive'],
+          //cursive 
+        },
+        extend: {
+          spacing: {
+            '128': '32rem',
+            '144': '36rem',
+          },
+          borderRadius: {
+            '4xl': '2rem',
+          }
         }
+      }
+    }
 
-    </script>
-    <title>Date Night Quiz</title>
+
+  </script>
 </head>
 
-<body>
 
-    <nav class="fixed flex row-span scrolled items-center justify-between p-2 bg-darkRed rounded-br-lg">
-        <div class="block lg:hidden">
-    
-        </div>
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-          <span class="text-3xl text-amber font-display tracking-tight">Date Night</span>
-        </div>
-    
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-          <div class="">
-            <a href="index.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
-              Home
-            </a>
-            <a href="recipes.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
-              Recipes
-            </a>
-            <a href="datequiz.html" class="inline-block text-xl px-4 leading-none text-amber hover:text-white mt-4 font-sans lg:mt-0">
-              Quiz
-            </a>
+<body class="bg-stone w-full h-full">
+  
+  <header>
+  
+    <div class="relative overflow-hidden bg-no-repeat bg-cover" style="
+      background-position: top;
+      background-image: url('./assets/images/shutterstock_603385892.jpg');
+      height: 450px;
+    ">
+      <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+        style="background-color: rgba(71, 66, 66, 0.75)">
+        <div class="flex justify-center items-center h-full">
+          <div class="text-center text-white px-6 md:px-12">
+            <h1 class="text-5xl font-bold mt-0 mb-6">Quiz Time!</h1>
           </div>
         </div>
-      </nav>
+      </div>
+    </div>
+    
+  </header>
 
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="tailwind.config.js"></script>
-    <script href="assets/datequiz.js"></script>
+
+    <div class="aspect-auto p-4 text-left">
+        <div class="aspect-auto p-4">
+            <h1>Question 1</h1>
+            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q1-b1"> answer 1</button>
+            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q1-b2"> answer 2</button>
+            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q1-b3"> answer 3</button>
+            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q1-b4"> answer 4</button>
+        </div>
+    </div>
+    
+    <div class="aspect-auto p-4 text-left">
+        <div class="aspect-auto p-4">
+            <h1>Question 2</h1>
+            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q2-b1"> answer 1</button>
+            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q2-b2"> answer 2</button>
+            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q2-b3"> answer 3</button>
+            <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q2-b4"> answer 4</button>
+        </div>
+    </div>
+    <div class="aspect-auto p-4 text-left">
+      <div class="aspect-auto p-4">
+          <h1>Question 3</h1>
+          <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q3-b1"> answer 1</button>
+          <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q3-b2"> answer 2</button>
+          <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q3-b3"> answer 3</button>
+          <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q3-b4"> answer 4</button>
+      </div>
+  </div>
+  <div class="aspect-auto p-4 text-left">
+    <div class="aspect-auto p-4">
+        <h1>Question 4</h1>
+        <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q4-b1"> answer 1</button>
+        <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q4-b2"> answer 2</button>
+        <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q4-b3"> answer 3</button>
+        <button class="bg-white hover:bg-zinc text-black py-.5 px-1 sm:font-cursive rounded" id="q4-b4"> answer 4</button>
+    </div>
+</div>
+<script src="assets/datequiz.js"></script>
 </body>
-
 </html>
