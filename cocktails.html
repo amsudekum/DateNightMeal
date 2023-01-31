@@ -62,7 +62,7 @@
     </script>
 </head>
 
-<body>
+<body class="bg-red">
 
     <nav class="fixed flex scrolled items-center justify-between flex-wrap p-6">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -86,16 +86,28 @@
         </div>
     </nav>
 
-    <div id="" class="">
-        <div class="">
+    <div id="" class="mb-8 ">
+        <div class>
           <img class="h-7 w-full object-cover object-center" src="Assets/images/pexels-natalie-bond-3365555.jpg" alt="Couple sitting in grass with a drink">
         </div>
     </div>
 
-    
+    <div class="container justify-center mx-auto px-5 bg-amber">
+        <div class="flex flex-row gap-1"><!-- search bar --> 
+            <input id="drinkInput" class="font-sans w-1/3" type="text" placeholder="Search For Cocktails Here..." aria-label="Search"/><!-- input -->
+            <button id="searchButton" class="font-sans w-1/4 rounded-full bg-amber border border-black">Search</button>
+        </div>
+
+        <div class="flex text-darkRed"><!-- drink display -->
+            <div id="drinkTitle"></div>
+            <div id="drinkInstructions"></div>
+            <div id="invalidDrink"></div>
+        </div>
+
+    </div>
 
 
 
- <script src="recipes.js"></script>   
+ <script src="cocktails.js"></script>   
 </body>
 </html>
