@@ -75,53 +75,29 @@
 </head>
 
 <body>
-
-    <nav class="fixed flex row-span scrolled items-center justify-between p-2 bg-darkRed">
-        <div class="block lg:hidden">
-    
-        </div>
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-          <span class="text-3xl text-amber font-display tracking-tight">Date Night</span>
-        </div>
-    
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-          <div class="">
-            <a href="index.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
-              Home
-            </a>
-            <a href="datequiz.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
-              Recipes
-            </a>
-            <a href="recipes.html" class="inline-block text-xl px-4 leading-none text-amber hover:text-white mt-4 font-sans lg:mt-0">
-              Quiz
-            </a>
-          </div>
-        </div>
-      </div>
-        <!-- updated and new nav bar -->
-  <nav class="fixed flex row-span scrolled items-center justify-between p-2 rounded-br-lg">
-    <div class="block lg:hidden">
-    </div>
+  
+  <nav class="fixed flex scrolled items-center justify-between flex-wrap p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <span class="text-3xl text-red font-display tracking-tight">Date Night</span>
+      <span class="font-display text-4xl text-red tracking-tight">Date Night</span>
+      <button id="mobile-open-button" class="text-3xl lg:hidden focus:outline-none">&#9776;
+      </button>
     </div>
-
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto sm:hidden">
       <div class="">
-        <a href="index.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
+        <a href="index.html" class="text-xl px-4 font-sans text-red hover:text-white mt-4 lg:mt-0">
           Home
         </a>
-        <a href="recipes.html" class="inline-block text-xl px-4 text-amber hover:text-white mt-4 font-sans lg:mt-0">
+        <a href="recipes.html" class="text-xl px-4 font-sans text-red hover:text-white mt-4 lg:mt-0">
           Recipes
         </a>
-        <a href="datequiz.html" class="inline-block text-xl px-4 leading-none text-amber hover:text-white mt-4 font-sans lg:mt-0">
-
+        <a href="datequiz.html" class="text-xl px-4 leading-none font-sans text-red hover:text-white mt-4 lg:mt-0">
           Quiz
         </a>
       </div>
     </div>
   </nav>
     </div>
+    
   <!-- workingsearch -->
   <section class="mt-5 mb-5">
     <form class="col-md-6 mx-auto">
