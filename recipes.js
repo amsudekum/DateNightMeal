@@ -60,7 +60,7 @@ else{
 }
 }
 
-document.getElementById('meal-submit').addEventListener('click',searchMeal);
+document.getElementById('searchButton').addEventListener('click',searchMeal);
 
 const showMealDetailsDiv = data => {
 const meal = data.meals[0];
@@ -75,6 +75,8 @@ mealDetailsSection.innerHTML = `
             <hr>
             <h5 class="card-title mt-4">Meal Ingredients</h5>
             <div id="meal-ingredients"></div>
+            <hr>
+            <div id="mealInstructions"></div>
         </div>
     </div>
 `
@@ -89,6 +91,12 @@ for(let i = 1; meal[`strIngredient${i}`]; i++){
     mealDetailsP.innerText = ingredients;
     mealIngredients.appendChild(mealDetailsP);
 }
+    const mealInstructions= document.getElementById('mealInstructions')
+    let instructions = meal.strInstructions;
+    let instructionsP = document.createElement('p');
+    instructionsP.className='cardText';
+    instructionsP.innerText = instructions;
+    mealInstructions.appendChild(instructionsP) 
 }
 const getMealDetails = mealID => {
 const mealDetailsSection = document.getElementById('meal-details-section');
