@@ -6,10 +6,10 @@ const createMealInfoDiv = (meal, mealInput) => {
     const mealName = meal.strMeal;
     const mealInfo = `
     <a href="#meal-details-section" style="text-decoration: none; color: black;">
-        <div onclick="getMealDetails(${meal.idMeal})" class="card border-0 shadow cursor" style="width: 18rem; border-radius: 10px">
-            <img src="${mealPhoto}" class="card-img-top" style="width: 18rem; border-radius: 10px 10px 0 0" alt="...">
+        <div onclick="getMealDetails(${meal.idMeal})" class="card border-0 shadow cursor bg-white justify-items-center" style="width: 18rem; border-radius: 10px">
+            <img src="${mealPhoto}" class="card-img-top justify-items-center " style="width: 18rem; border-radius: 10px 10px 0 0" alt="...">
             <div class="card-body">
-                <h5 class="card-title text-center">${mealName}</h5>
+                <h5 class="card-title text-center bg-white">${mealName}</h5>
             </div>
         </div>
     </a>
@@ -69,7 +69,7 @@ const mealName = meal.strMeal;
 const mealDetailsSection = document.getElementById('meal-details-section');
 mealDetailsSection.innerHTML = `
     <div id="meal-details" class="card px-0 pb-1 border-0 shadow col-xm-12 col-sm-12 col-md-6" style="border-radius: 10px;">
-        <img src="${mealPhoto}" class="card-img-top" style="border-radius: 10px 10px 0 0;" alt=" ...">
+        <img src="${mealPhoto}" class="card-img-top justify-content-center " style="border-radius: 10px 10px 0 0;" alt=" ...">
         <div class="card-body">
             <h2 class="card-title text-center my-3">${mealName}</h2>
             <hr>

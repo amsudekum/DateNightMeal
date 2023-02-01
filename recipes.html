@@ -51,6 +51,7 @@
                     'black': '#171717',
                     'white': '#fafafa',
                     'darkRed': '#9f1239',
+                    'light': '#fecaca',
                 },
                 fontFamily: {
                     //block text
@@ -75,7 +76,7 @@
     <title>Date Night Quiz</title>
 </head>
 
-<body class="bg-amber">
+<body class="bg-light">
   
   <nav class="fixed flex scrolled items-center justify-between flex-wrap p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -113,27 +114,29 @@
   <!-- workingsearch -->
 
 
-  <div class="bg-amber text-center p-6 py-7">
-    <div class="bg-amber items-center sp-6">
-        <p class="font-sans text-black text-bold tracking-tight text-xl md:font-sans"> You know what they say, the way to a person's heart is through their stomach</p>
+  <div class="bg-light text-center p-6 py-7">
+    <div class="items-center sp-6">
+        <p class="text-4xl text-darkRed font-bold font-sans mt-0 mb-6"> You know what they say, the way to a person's heart is through their stomach</p>
     </div>
     
-    <section class="mt-5 bg-white mb-5">
-      <form class="col-md-6 mx-auto bg-amber">
-        <div class="input-group items-center justify-content-center bg-amber">
-          <input id="meal-input"type="text"class="font-sans h-4 w-1/3 border-black border-bold form-control bg-light" placeholder="Search for Meal..."aria-label="Search"/>
+    <section class="mt-5 bg-light mb-5">
+      <form class="col-md-6 mx-auto">
+        <div class="input-group items-center justify-content-center">
+          <input id="meal-input"type="text"class="font-sans h-4 w-1/3 border border-black border-bold form-control bg-white mb-2 mt-2" placeholder="Search for Meal..."aria-label="Search"/>
           <div class="input-group-append">
-            <a id="searchButton" class="font-sans w-6.5 hover:underline underline-offset-1 rounded-full bg-amber text-center border border-black">Search</a>
+            <a id="searchButton" class="font-sans w-6.5 hover:underline underline-offset-1 rounded-full bg-white text-center border border-black">Search</a>
           </div>
         </div>
       </form>
       <h4 id="no-meal-found" class="text-center mt-5"></h4>
     </section>
 
-    <section id="meal-info-section" class="row"></section>
-    <section id="meal-details-section"widthclass="row my-5 d-flex justify-content-center p-3"></section>
-    <br class="items-center p-6">
-    <div class=" flex scrolled items-center justify-center p-6">
+    <div class="container flex flex-row items-center justify-center bg-light text-black mx-auto mb-5">
+      <section id="meal-info-section" class="row text-center bg-light mr-3"></section>
+      <section id="meal-details-section"widthclass="row my-5 d-flex justify-content-center p-3 text-center mr-3" class="bg-white"></section>
+      <br class="items-center p-6">
+      <div class=" flex scrolled items-center justify-center p-6">
+    </div>
     
 </div>
 
