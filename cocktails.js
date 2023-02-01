@@ -6,93 +6,94 @@ let url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 const createDrinkInfoDiv = (drink, drinkInput) => {
     const drinkPhoto = drink.strDrinkThumb;
     const drinkName = drink.strDrink;
-    const drinkInfo =   
-        `<a href="#drinkTitle" style="text-decoration: none; color: black;">
-            <div onclick="showDrinkTitleDiv(${drink.idDrink})" class="card border-0 shadow cursor" style="width: 18rem; border-radius: 10px">
-                <img src="${drinkPhoto}" class="card-img-top" style="width: 18rem; border-radius: 10px 10px 0 0" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title text-center">${drinkName}</h5>
-                </div>
+    const drinkInfo = 
+    `<a href="#drinkDetailsSection" style="text-decoration: none; color: black;">
+        <div onclick='getDrinkDetails(${drink.idDrink})' class='card border-0 shadow cursor' style='width: 18rem; border-raduis: 10px'>
+            <img src='${drinkPhoto}' class='card-img-top' style='width: 18rem; border-radius: 10px 10px 0 0' alt='...'>
+            <div class='card-body'>
+                <h5 class='card-title text-center'>${drinkName}</h5>
             </div>
-        </a>`
-    
-    const drinkInfoSection = document.getElementById('drinkTitle');
+        </div>
+    </a>` 
+
+    const drinkInfoSection = document.getElementById('drinkInfoSection');
     const drinkInfoDiv = document.createElement('div');
     drinkInfoDiv.className = 'col-xm-1 col-sm-1 col-md-3 p-3 d-flex justify-content-center';
     drinkInfoDiv.innerHTML = drinkInfo;
     drinkInfoSection.appendChild(drinkInfoDiv);
 }
 
-const showDrinkTitleDiv = (data, drinkInput) => {
+const showDrinkInfoDiv = (data, drinkInput) => {
     const drink = data.drinks;
     if(drink){
         drink.forEach(element => {
         createDrinkInfoDiv(element, drinkInput);
-        });
+        })
+    }else{
+        const noDrinkFound = document.getElementById('invalidDrink')
+        noDrinkFound = `No drink found for ${drinkInput}!`;
     }
-    else{
-        const noDrinkFound = document.getElementById('invalidDrink');
-        noDrinkFound.innerText = `Sorry! We don't have ${drinkInput} yet!`;
-    }
-}
+} 
 
-const searchDrinks = () =>{
+const searchDrink = () =>{
     const drinkInput = document.getElementById('drinkInput').value;
-    const noDrinkFound = document.getElementById('invalidDrink');
-    const drinkInfoSection = document.getElementById('drinkTitle')
-    const drinkInstructions = document.getElementById('drinkInstructions')
-    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkInput}`;
-
+    
     if(drinkInput){
+        const noDrinkFound = document.getElementById('invalidDrink')
         noDrinkFound.innerText = ``;
+        
+        const drinkInfoSection = document.getElementById('drinkInfoSection')
         drinkInfoSection.innerHTML = ``;
-        drinkInstructions.innerHTML = ``;
+
+        const drinkDetailsSection = document.getElementById('drinkDetailsSection')
+        drinkDetailsSection.innerHTML = ``;
+
+        const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkInput}`
         fetch(url)
         .then(res => res.json())
         .then(data => {
-            showDrinkTitleDiv(data, drinkInput);
-        })       
+            showDrinkInfoDiv(data, drinkInput);
+        })
     }else{
-        noDrinkFound.innerText = `You didn't enter anything!`;
+        const invalidDrink = document.getElementById('noDrinkFound')
+        invalidDrink.innerText = `Please enter a drink.`
     }
 }
 
-document.getElementById('searchButton').addEventListener('click', searchDrinks);
+document.getElementById('searchButton').addEventListener('click', searchDrink)
 
-const showDrinkInfoDiv = data => {
+const showDrinkDetailsDiv = data => {
     const drink = data.drinks[0];
     const drinkPhoto = drink.strDrinkThumb;
-    const drinkName = drink.strDrink;
-    const drinkInstructions = document.getElementById('drinkInstructions');
-    drinkInstructions.innerHTML = 
-        `<div id="drinkDetails" class="card px-0 pb-1 border-0 shadow col-xm-12 col-sm-12 col-md-6" style="border-radius: 10px;">
-        <img src="${drinkPhoto}" class="card-img-top" style="border-radius: 10px 10px 0 0;" alt=" ...">
-        <div class="card-body">
-            <h2 class="card-title text-center my-3">${drinkName}</h2>
+    const drinkName = drink.strDrink; 
+    const drinkDetailsSection = document.getElementById('drinkDetailsSection')
+    drinkDetailsSection.innerHTML = 
+    `<div id='drinkDetails' class = 'card px-0 pb-1 border-0 shadow col-xm-12       col-sm-12 col-md-6' style='border-radius: 10px;'
+        <img src='${drinkPhoto}' class = 'card-img-top' style = 'border-radius: 10px 10px 0 0;' alt=' ...'>
+        <div class = 'card-body'>
+            <h2 class = 'card-title text-center my-3'>${drinkName}</h2>
             <hr>
-            <h5 class="card-title mt-4">Drink Ingredients</h5>
-            <div id="drink-ingredients"></div>
+            <h5 class = 'card-title mt-4'> Ingredients</h5>
+            <div id='drinkIngredients'></div>
         </div>
-    </div> ` 
-
-    const drinkIngredients = document.getElementById('drink-ingredients');
+    </div>`
     
+    const drinkIngredients = document.getElementById('drinkIngredients')
     for(let i = 1; drink[`strIngredient${i}`]; i++){
-        const ingredients = `✔ ${drink[`strMeasure${i}`]} ${drink[`strIngredient${i}`]}`
-
-        const drinkDetailsP = document.createElement('p');
+        let ingredients = `${drink[`strMeasure${i}`]} ${drink[`strIngredient${i}`]}`
+        let drinkDetailsP = document.createElement('p');
         drinkDetailsP.className = 'cardText';
         drinkDetailsP.innerText = ingredients;
         drinkIngredients.appendChild(drinkDetailsP);
     }
 }
 
-const getDrinkInstructions = drinkID => {
-    const drinkInstructions = document.getElementById('drinkInstructions');
-    drinkInstructions.innerHTML = ``;
+const getDrinkDetails = drinkID => {
+    let drinkDetailsSection = document.getElementById('drinkDetailsSection')
+    drinkDetailsSection.innerHTML = ``;
 
-    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkID}`
+    let url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkID}`
     fetch(url)
     .then(res => res.json())
-    .then(data => showDrinkInfoDiv(data));
+    .then(data => showDrinkDetailsDiv(data));
 }
