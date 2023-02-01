@@ -190,22 +190,29 @@ const answers = [
         combination: ['A. Our birthday suits.','D. "Banana Pancakes" by Jack Johnson.','B. Your Name.','A. Whipped Cream.','B. On vacation.','D. Hotcakes','B. Their love for adventure.','D. My favorite sweatshirt.' ],
         text:"Banana Pancakes",
         image:"https://divascancook.com/wp-content/uploads/2022/01/banana-pancakes-8.jpg",
-        alt: "banana pancakes"
+        alt: "banana pancakes",
+        text: "Who doesn't love a little breakfast for dinner? Keep your date night nice and cozy with this easy peasy Banana Pancakes recipe. Sip on an espresso martini while you're eating to keep the romance going all night long."
     },
     {
         combination: ['C. Dressed to the nines.','C. "Beautiful Dreamer" by Bing Crosby.','C. The Photograph.','C. Gold Leaf','D. We were friends first.','C. Quiche Lorraine.',"A. Their big ol' butt.",'C. My designer bag.'],
         text:"Venetian Duck Ragu",
-        image:"https://cdn.shopify.com/s/files/1/1725/5449/articles/Duck_ragu_1200x1200.jpg?v=1590766287"
+        image:"https://cdn.shopify.com/s/files/1/1725/5449/articles/Duck_ragu_1200x1200.jpg?v=1590766287",
+        alt: "Venetian Duck Ragu",
+        text: "There's no shortage of luxury here with this Venetian Duck Ragu. Slap on your flashiest digs, dim the lights <em>real</em> low and enjoy this gorgeous pasta with your favorite glass of Chianti."
     },
     {
         combination: ['D. Pajamas, duh.','B. "Chicken Teriyaki" by ROSALÍA.','A. Bodyheat.','A. Whipped Cream.','A. A Tinder hookup.','A. Sausage.','C. They hold their head high.','A. My ride or die lipstick.'],
         text:"Massaman Beef Curry",
-        image:"https://www.kitchensanctuary.com/wp-content/uploads/2019/10/Beef-Massaman-square-1200-1459.jpg"
+        image:"https://www.kitchensanctuary.com/wp-content/uploads/2019/10/Beef-Massaman-square-1200-1459.jpg",
+        alt: "Massaman Beef Curry",
+        text: "No vanilla date night for you two. This Massaman Beef Curry is a match made in heaven for you thrill seakers! Cut down on the spice with a delicous Mango Lassi."
     },
     {
         combination: ['B. Trying out a new outfit.','A. "Lollipop" by Lil Wayne.','C. The Photograph.','D. Whatever I have in my fridge.','B. On vacation.','B. A Fry Up.','D. Their ability to laugh about themselves.','B. My passport.'],
         text:"Honey Teriyaki Salmon",
-        image:"https://spicysouthernkitchen.com/wp-content/uploads/2022/01/Teriyaki-Salmon-4.jpg"
+        image:"https://spicysouthernkitchen.com/wp-content/uploads/2022/01/Teriyaki-Salmon-4.jpg",
+        alt:"Honey Teriyaki Salmon",
+        text:"You're feeling frisky, huh? With aphrodisiacs such as salmon and honey, this dish is packed with all the good stuff to <em>really</em> set the mood. Pair this with a Honey Bee and you two will be having dinner in bed."
     }
 ]
     
