@@ -75,6 +75,7 @@ const showDrinkDetailsDiv = data => {
             <hr>
             <h5 class = 'card-title mt-4'> Ingredients</h5>
             <div id='drinkIngredients'></div>
+            <div id='drinkInstructions'></div>
         </div>
     </div>`
     
@@ -86,6 +87,13 @@ const showDrinkDetailsDiv = data => {
         drinkDetailsP.innerText = ingredients;
         drinkIngredients.appendChild(drinkDetailsP);
     }
+
+    const drinkInstructions= document.getElementById('drinkInstructions')
+    let instructions = drink.strInstructions;
+    let instructionsP = document.createElement('p');
+    instructionsP.className='cardText';
+    instructionsP.innerText = instructions;
+    drinkInstructions.appendChild(instructionsP)   
 }
 
 const getDrinkDetails = drinkID => {
