@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bottoms Up!</title>
+    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:wght@300&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+          content: ["./**/*.{html,js}"],
+          theme: {
+            spacing: {
+              '1': '8px',
+              '2': '12px',
+              '3': '16px',
+              '4': '24px',
+              '5': '32px',
+              '6': '48px',
+              '7': '550px',
+              '8': '170px',
+              '10': '200px',
+            },
+            screens: {
+              sm: '480px',
+              md: '768px',
+              lg: '976px',
+              xl: '1440px',
+            },
+            colors: {
+              'red': '#e11d48',
+              'amber': '#fffbeb',
+              'black': '#171717',
+              'white': '#fafafa',
+              'darkRed': '#991b1b',
+              'light': '#fecaca',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              cursive: ['Sacramento', 'sans-serif'],
+            },
+            extend: {
+              spacing: {
+                '128': '32rem',
+                '144': '36rem',
+              },
+              borderRadius: {
+                '4xl': '2rem',
+              }
+            }
+          }
+        }
+    </script>
+</head>
+
+<body class="bg-red">
+
+    <nav class="fixed flex scrolled items-center justify-between flex-wrap p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <span class="font-cursive text-4xl text-red tracking-tight">Date Night</span>
+          <button id="mobile-open-button" class="text-3xl lg:hidden focus:outline-none">&#9776;
+          </button>
+        </div>
+    
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto sm:hidden">
+          <div class="">
+            <a href="index.html" class="text-xl px-4 font-sans text-red hover:text-white mt-4 lg:mt-0">
+              Home
+            </a>
+            <a href="recipes.html" class="text-xl px-4 font-sans text-red hover:text-white mt-4 lg:mt-0">
+              Recipes
+            </a>
+            <a href="datequiz.html" class="text-xl px-4 leading-none font-sans text-red hover:text-white mt-4 lg:mt-0">
+              Quiz
+            </a>
+          </div>
+        </div>
+    </nav>
+
+    <div id="" class="mb-8 ">
+        <div class>
+          <img class="h-7 w-full object-cover object-center" src="Assets/images/pexels-natalie-bond-3365555.jpg" alt="Couple sitting in grass with a drink">
+        </div>
+    </div>
+
+    <div class="container justify-center mx-auto px-5 bg-amber">
+        <div class="flex flex-row gap-1"><!-- search bar --> 
+            <input id="drinkInput" class="font-sans w-1/3" type="text" placeholder="Search For Cocktails Here..." aria-label="Search"/><!-- input -->
+            <button id="searchButton" class="font-sans w-1/4 rounded-full bg-amber border border-black">Search</button>
+        </div>
+
+        <div class="flex text-darkRed"><!-- drink display -->
+            <div id="drinkTitle"></div>
+            <div id="drinkInstructions"></div>
+            <div id="invalidDrink"></div>
+        </div>
+
+    </div>
+
+
+
+ <script src="cocktails.js"></script>   
+</body>
+</html>
