@@ -1,5 +1,5 @@
-const questionDisplay = document.querySelector('#questions')
-const answerDisplay = document.querySelector('#answer')
+const questionsDisplay = document.querySelector('#questions')
+const answersDisplay = document.querySelector('#answer')
 
 const questions = [
     {
@@ -183,7 +183,7 @@ const questions = [
 ]
 
 const unansweredQuestions = []
-const chosenAnswers = []
+const selectedAnswers = []
 
 const answers = [
     {
@@ -220,7 +220,7 @@ const populateQuestions = () => {
        const titleHeading = document.createElement('h2')
        titleHeading.textContent = question.text
        titleBlock.append(titleHeading)
-       questionDisplay.append(titleBlock)
+       questionsDisplay.append(titleBlock)
 
        const answersBlock = document.createElement('div')
        answersBlock.id = question.id + "-questions"
@@ -242,10 +242,7 @@ const populateQuestions = () => {
         const answerInfo = document.createElement('p')
         const imageLink= document.createElement('a')
         imageLink.setAttribute('href', answer.credit)
-        const sourceLink = document.createElement('a')
-        sourceLink.textContent = 'Unsplash'
-        sourceLink.setAttribute('src', 'https://www.unsplash.com')
-        answerInfo.append(imageLink, ' to ', sourceLink)
+       
         
 
 
@@ -254,24 +251,22 @@ const populateQuestions = () => {
 
         answersBlock.append(answerBlock)
        })
-       questionDisplay.append(answersBlock)
+       questionsDisplay.append(answersBlock)
     })
 }
 
 populateQuestions()
 
-const handleClick = (questionId, chosenAnswer) => {
+const handleClick = (questionId, selectedAnswer) => {
     if (unansweredQuestions.includes(questionId))
-    chosenAnswers.push(chosenAnswer)
+    selectedAnswers.push(selectedAnswer)
     const itemToRemove = unansweredQuestions.indexOf(questionId)
 
     if (itemToRemove > -1) {
         unansweredQuestions.splice(itemToRemove, 1)
     }
-    console.log(chosenAnswers)
+    console.log(selectedAnswers)
     console.log(unansweredQuestions)
-
-    // disableQuestionBlock(questionId, chosenAnswer)
 
     const lowestQuestionId = Math.min(...unansweredQuestions)
     location.href = '#' + lowestQuestionId
@@ -285,10 +280,10 @@ const showAnswer = () => {
 
     let result 
     answers.forEach(answer => {
-        if (chosenAnswers.includes(answer.combination[0]) +
-            chosenAnswers.includes(answer.combination[1]) +
-            chosenAnswers.includes(answer.combination[2]) +
-            chosenAnswers.includes(answer.combination[3])
+        if (selectedAnswers.includes(answer.combination[0]) +
+            selectedAnswers.includes(answer.combination[1]) +
+            selectedAnswers.includes(answer.combination[2]) +
+            selectedAnswers.includes(answer.combination[3])
 
         ) {
             result = answer
@@ -310,7 +305,7 @@ const showAnswer = () => {
 
     answerBlock.append(answerTitle, answerImage)
 
-    answerDisplay.append(answerBlock)
+    answersDisplay.append(answerBlock)
 
     const allAnswerBlocks = document.querySelectorAll('.answer-block')
     Array.from(allAnswerBlocks).forEach(answerBlock => answerBlock.replaceWith(answerBlock.cloneNode(true)))
