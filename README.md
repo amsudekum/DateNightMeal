@@ -7,7 +7,8 @@ We've created a quiz that will make choosing a date night meal a little bit easi
 ## Installation
 
 Follow this link to view our page.
-
+ https://amsudekum.github.io/DateNightMeal/
+ 
 ## Usage
 
 Use the navigation bar to head to your desired page-recipes, cocktails, or quiz. On the quiz page, you will be able to take a quiz and get a meal suggestion. On the recipes and cocktails page, you will be able to enter a desired meal or drink and your desired result should appear.
